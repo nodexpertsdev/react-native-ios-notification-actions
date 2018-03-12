@@ -1,27 +1,56 @@
 {
-  "name": "react-native-ios-notification-actions",
-  "version": "1.0.0",
+  "_from": "react-native-ios-notification-actions",
+  "_id": "react-native-ios-notification-actions@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-3DlOQo5CWSFWL55LmDPA3pyF1jA=",
+  "_location": "/react-native-ios-notification-actions",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-ios-notification-actions",
+    "name": "react-native-ios-notification-actions",
+    "escapedName": "react-native-ios-notification-actions",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-ios-notification-actions/-/react-native-ios-notification-actions-1.0.1.tgz",
+  "_shasum": "dc394e428e425921562f9e4b9833c0de9c85d630",
+  "_spec": "react-native-ios-notification-actions",
+  "_where": "/Users/dotline/sumit/CountlyPro",
+  "author": {
+    "name": "Alonso Holmes",
+    "email": "hello@alonso.io"
+  },
+  "bugs": {
+    "url": "https://github.com/holmesal/react-native-ios-notification-actions/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
   "description": "Swipe + text input actions for ios push notifications",
-  "main": "index.ios.js",
   "directories": {
     "example": "example"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/holmesal/react-native-ios-notification-actions.git"
-  },
+  "homepage": "https://github.com/holmesal/react-native-ios-notification-actions#readme",
   "keywords": [
     "react-component",
     "react-native",
     "ios"
   ],
-  "author": "Alonso Holmes <hello@alonso.io>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/holmesal/react-native-ios-notification-actions/issues"
+  "main": "index.ios.js",
+  "name": "react-native-ios-notification-actions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holmesal/react-native-ios-notification-actions.git"
   },
-  "homepage": "https://github.com/holmesal/react-native-ios-notification-actions#readme"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.1"
 }

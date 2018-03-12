@@ -1,9 +1,3 @@
-# looking for a maintainer
-
-I'm not actively maintaining this, so use it at your own risk and make sure to check the open issues.
-
-If you're interested in maintaining this repo, drop me a line at: hello(at)alonso.io
-
 # react-native-ios-notification-actions
 
 ![locked](https://zippy.gfycat.com/VibrantKaleidoscopicCrownofthornsstarfish.gif)
@@ -25,10 +19,10 @@ The basic workflow is:
 # Install
 
 ### rnpm (preferred)
-`rnpm install react-native-ios-notification-actions
+`rnpm install react-native-ios-notification-actions`
 
 ### Manual
-1. `npm install react-native-ios-notification-actions
+1. `npm install react-native-ios-notification-actions`
 2. Drag `./RNNotificationActions/RNNotificationActions.xcodeproj` into your project.
 3. Add `libRNNotificationActions.a` to your `Link Binary With Libraries` build phase
 

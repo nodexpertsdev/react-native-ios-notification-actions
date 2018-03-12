@@ -1,10 +1,11 @@
-import { NativeModules, NativeAppEventEmitter } from 'react-native';
-const { RNNotificationActions } = NativeModules;
+import {NativeModules, NativeAppEventEmitter} from 'react-native';
+const {RNNotificationActions} = NativeModules;
 
 let actions = {};
+let isTokenValid = false;
 
-function handleActionCompleted() {
-  RNNotificationActions.callCompletionHandler();
+todoComplete = () => {
+  console.info('TODO - implement complete callbacks for objective-c (the callback was already called in this case)');
 };
 
 export class Action {
@@ -17,7 +18,8 @@ export class Action {
     actions[opts.identifier] = this;
     NativeAppEventEmitter.addListener('notificationActionReceived', (body) => {
       if (body.identifier === opts.identifier) {
-        onComplete(body, handleActionCompleted);
+        //console.info('got action interaction!', body);
+        onComplete(body, todoComplete);
       }
     });
   }
@@ -32,17 +34,25 @@ export class Category {
 
 }
 
+export const validateToken = (success) => {
+  isTokenValid = success;
+}
+
+
+
 export const updateCategories = (categories) => {
   let cats = categories.map((cat) => {
     return Object.assign({}, cat.opts, {
       actions: cat.opts.actions.map((action) => action.opts)
-    });
+    })
   });
-
-  RNNotificationActions.updateCategories(cats);
+  // RNNotificationActions.updateCategories(cats);
   // Re-update when permissions change
   NativeAppEventEmitter.addListener('remoteNotificationsRegistered', () => {
-    RNNotificationActions.updateCategories(cats);
+    //console.info('updating notification categories in response to permission change');
+    if(!isTokenValid) {
+      RNNotificationActions.updateCategories(cats);
+    }
   });
 };
 
@@ -50,5 +60,6 @@ export const updateCategories = (categories) => {
 export default {
   Action,
   Category,
-  updateCategories
+  updateCategories,
+  validateToken
 };
